@@ -7,7 +7,7 @@
 	<title>Vhone</title>
 	<script src="Build/UnityLoader.js"></script>
 	<script>
-		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json");
+		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Build.json");
 		var scaleToFit;
 		try {
 			scaleToFit = !!JSON.parse("");
@@ -25,14 +25,14 @@
 				w = window.innerWidth;
 				h = window.innerHeight;
 
-				var r = 1792 / 828;
+				var r = 1792 / 1008;
 
 				if (w * r > window.innerHeight) {
 					w = Math.min(w, Math.ceil(h / r));
 				}
 				h = Math.floor(w * r);
 			} else {
-				w = 828;
+				w = 1008;
 				h = 1792;
 			}
 
